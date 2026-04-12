@@ -1,37 +1,22 @@
-let changed = false;
+// Samundra Portfolio — script.js
 
-function sayHello() {
-  alert("Welcome Samundra 🚀");
-}
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section, .hero');
+const navLinks = document.querySelectorAll('.nav-links a');
 
-function changeText() {
-  const title = document.querySelector("#home");
+window.addEventListener('scroll', () => {
+  let current = '';
 
-  if (changed === false) {
-    title.innerText = "Welcome to my portfolio 😎";
-    changed = true;
-  } else {
-    title.innerText = "Hello Samundra 👋";
-    changed = false;
-  }
-let changed = false;
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 80) {
+      current = section.getAttribute('id');
+    }
+  });
 
-function sayHello() {
-  alert("Welcome Samundra 🚀");
-}
-
-function changeText() {
-  const title = document.querySelector("#home");
-
-  if (!changed) {
-    title.innerText = "Welcome to my portfolio 😎";
-    changed = true;
-  } else {
-    title.innerText = "Hello Samundra 👋";
-    changed = false;
-  }
-}
-
-function toggleMode() {
-  document.body.classList.toggle("light-mode");
-}
+  navLinks.forEach(link => {
+    link.style.color = '';
+    if (link.getAttribute('href') === '#' + current) {
+      link.style.color = '#f0eff8';
+    }
+  });
+});
