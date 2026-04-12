@@ -1,88 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Samundra Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samundra Khiuju — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <span class="nav-logo">samundra.dev</span>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<!-- HOME -->
-<h1 id="home">Hello Samundra 👋</h1>
-<p>I am a student in Japan learning web development 🚀</p>
+  <section id="home" class="hero">
+    <div class="avatar">SK</div>
+    <div class="hero-text">
+      <p class="hero-tag">Web Developer · Japan</p>
+      <h1>Hi, I'm <span class="accent">Samundra</span>.</h1>
+      <p class="hero-sub">
+        Building websites from scratch — HTML, CSS &amp; JavaScript.<br>
+        Studying IT in Japan · Targeting IT roles from 2026.
+      </p>
+      <div class="available">
+        <span class="dot"></span>
+        Open to opportunities · 2026 graduate
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View my work</a>
+        <a href="mailto:samundrakhiuju44@gmail.com" class="btn btn-outline">Contact me</a>
+      </div>
+    </div>
+  </section>
 
-<hr>
+  <section id="about">
+    <p class="section-tag">About</p>
+    <h2>About me</h2>
+    <p class="about-text">
+      I'm <strong>Samundra Khiuju</strong>, from <strong>Bhaktapur, Nepal</strong>, currently in my 2nd year
+      at a vocational IT school (専門学校) in Japan. I build websites from scratch and level up
+      my JavaScript and Python skills every day. I hold <strong>JLPT N3</strong> and I'm actively
+      studying toward N2. I'm hardworking, self-motivated, and looking to join a Japanese
+      IT or SES company after graduation in 2026.
+    </p>
+    <div class="jp-card">
+      <p class="jp-name">キジュ・サムンドラ</p>
+      <p class="jp-sub">Samundra Khiuju · Web Developer · ネパール出身</p>
+      <p class="jp-body">
+        はじめまして。キジュ・サムンドラと申します。ネパールのバクタプル出身で、現在は日本の専門学校でIT（Webデザイン・開発）を学んでいます。<br><br>
+        HTMLとCSSを使ったWebサイト制作が得意で、現在はJavaScriptとPythonも勉強中です。カフェのWebサイトやポートフォリオサイトを一から制作した経験があります。<br><br>
+        日本語能力試験はN3を取得しており、現在N2の取得を目指して勉強しております。来年卒業予定で、IT企業・SES企業への就職を希望しています。よろしくお願いいたします。
+      </p>
+      <span class="jp-status">
+        <span class="dot"></span>
+        就職活動中 · 2026年 卒業予定
+      </span>
+    </div>
+  </section>
 
-<!-- ABOUT -->
-<h2 id="about">About Me</h2>
-<p>I am currently studying in a senmon school and learning HTML, CSS, and JavaScript.</p>
+  <section id="skills">
+    <p class="section-tag">Skills</p>
+    <h2>What I know</h2>
+    <div class="skills-list">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill learning">JavaScript — learning</span>
+      <span class="skill learning">Python — learning</span>
+      <span class="skill">Git / GitHub</span>
+      <span class="skill">Responsive Design</span>
+      <span class="skill">Japanese · JLPT N3</span>
+      <span class="skill">Excel / PowerPoint</span>
+    </div>
+  </section>
 
-<!-- SKILLS -->
-<h2 id="skills">Skills</h2>
-<ul class="skills">
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-</ul>
-<h2 id="projects">Projects</h2>
+  <section id="projects">
+    <p class="section-tag">Projects</p>
+    <h2>Things I've built</h2>
+    <div class="projects-grid">
 
-<div class="projects">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <div class="card-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <p>My personal portfolio — dark themed, built entirely from scratch with no frameworks or templates.</p>
+        <div class="card-links">
+          <a href="https://samundrakhiuju.github.io/Samundra-portfolio/" target="_blank" class="card-link">Live ↗</a>
+          <a href="https://github.com/samundrakhiuju" target="_blank" class="card-link">GitHub ↗</a>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>My First Website</h3>
-    <p>Built using HTML, CSS, and JavaScript.</p>
-  </div>
+      <div class="card">
+        <h3>Café Website</h3>
+        <div class="card-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Responsive</span>
+        </div>
+        <p>A multi-page café site built from scratch. Mobile-first layout with homepage, menu, and contact.</p>
+        <div class="card-links">
+          <a href="https://github.com/samundrakhiuju" target="_blank" class="card-link">GitHub ↗</a>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>Coming Soon</h3>
-    <p>More projects coming soon 🚀</p>
-  </div>
+      <div class="card dashed">
+        <h3>Next project — coming soon</h3>
+        <div class="card-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">API</span>
+        </div>
+        <p>Currently building something with JavaScript and a public API. Stay tuned.</p>
+      </div>
 
-</div>
-<!-- PROJECTS -->
-<h2 id="projects">Projects</h2>
+    </div>
+  </section>
 
-<div class="projects">
+  <section id="contact">
+    <p class="section-tag">Contact</p>
+    <h2>Get in touch</h2>
+    <p class="contact-intro">I'm currently looking for IT roles in Japan. Feel free to reach out!</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:samundrakhiuju44@gmail.com">samundrakhiuju44@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/samundrakhiuju" target="_blank">github.com/samundrakhiuju</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Location</span>
+        <span>Aichi, Japan</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="card">
-    <h3>My First Website</h3>
-    <p>Built using HTML, CSS, and JavaScript.</p>
-  </div>
+  <footer>
+    <p>&copy; 2026 Samundra Khiuju &nbsp;&middot;&nbsp; Built with HTML / CSS / JS in Japan</p>
+  </footer>
 
-  <div class="card">
-    <h3>Portfolio Website</h3>
-    <p>This portfolio you are seeing right now 😎</p>
-  </div>
-
-</div>
-
-<!-- CONTACT -->
-<h2 id="contact">Contact</h2>
-<p>Email: samundrakhiuju44@gmail.com</p>
-<p>Location: Japan 🇯🇵</p>
-
-<br>
-
-<!-- BUTTONS -->
-<button onclick="sayHello()">Click Me</button>
-<button onclick="changeText()">Change Title</button>
-<button onclick="toggleMode()">🌙 Toggle Mode</button>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
-<footer>
-  <p>© 2026 Samundra | Built with 💻 in Japan</p>
-</footer>
