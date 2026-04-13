@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samundra Khiuju — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <span class="nav-logo">samundra.dev</span>
     <div class="nav-links">
@@ -21,6 +22,7 @@
     </div>
   </nav>
 
+  <!-- Hero -->
   <section id="home" class="hero">
     <img src="profile.png" alt="Samundra Khiuju" class="avatar-img">
     <div class="hero-text">
@@ -41,6 +43,7 @@
     </div>
   </section>
 
+  <!-- About -->
   <section id="about">
     <p class="section-tag">About</p>
     <h2>About me</h2>
@@ -50,14 +53,16 @@
       I moved to Japan with one goal — to build a career in tech.<br><br>
       I build websites from scratch, write clean HTML and CSS, and I'm actively leveling up
       my JavaScript and Python every day. I've already shipped real projects and I'm not stopping.<br><br>
-      <strong>JLPT N3</strong> certified, targeting N2. Graduating <strong>2027</strong>.<br>
+      <strong>JLPT N3</strong> certified, targeting N2. Graduating <strong>March 2027</strong>.<br>
       Looking to join a Japanese IT company where I can contribute, grow fast, and build things that matter.
     </p>
+
+    <!-- Japanese intro -->
     <div class="jp-card">
-      <p class="jp-name">キウズ・サムンドラ</p>
+      <p class="jp-name">キジュ・サムンドラ</p>
       <p class="jp-sub">Samundra Khiuju · Web Developer · ネパール出身</p>
       <p class="jp-body">
-        はじめまして。キウズ・サムンドラと申します。ネパールのバクタプル出身で、
+        はじめまして。キジュ・サムンドラと申します。ネパールのバクタプル出身で、
         日本でITキャリアを築くために京都に来ました。<br><br>
         現在、専門学校でWebデザイン・開発を学んでおり、HTMLとCSSを使ったWebサイト制作が得意です。
         JavaScriptとPythonも毎日勉強しており、すでに実際のプロジェクトをいくつか完成させています。
@@ -73,6 +78,7 @@
     </div>
   </section>
 
+  <!-- Skills -->
   <section id="skills">
     <p class="section-tag">Skills</p>
     <h2>What I know</h2>
@@ -88,6 +94,7 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
     <p class="section-tag">Projects</p>
     <h2>Things I've built</h2>
@@ -100,7 +107,7 @@
           <span class="tag">CSS</span>
           <span class="tag">JavaScript</span>
         </div>
-        <p>My personal portfolio — dark themed, built entirely from scratch with no frameworks or templates.</p>
+        <p>My personal portfolio — dark themed, built from scratch with no frameworks.</p>
         <div class="card-links">
           <a href="https://samundrakhiuju.github.io/Samundra-portfolio/" target="_blank" class="card-link">Live ↗</a>
           <a href="https://github.com/samundrakhiuju" target="_blank" class="card-link">GitHub ↗</a>
@@ -114,7 +121,7 @@
           <span class="tag">CSS</span>
           <span class="tag">Responsive</span>
         </div>
-        <p>A multi-page café site built from scratch. Mobile-first layout with homepage, menu, and contact.</p>
+        <p>A multi-page café site built from scratch. Mobile-first, responsive layout.</p>
         <div class="card-links">
           <a href="https://github.com/samundrakhiuju" target="_blank" class="card-link">GitHub ↗</a>
         </div>
@@ -126,16 +133,17 @@
           <span class="tag">JavaScript</span>
           <span class="tag">API</span>
         </div>
-        <p>Currently building something with JavaScript and a public API. Stay tuned.</p>
+        <p>Currently building a JavaScript app with a public API. Stay tuned.</p>
       </div>
 
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <p class="section-tag">Contact</p>
     <h2>Get in touch</h2>
-    <p class="contact-intro">I'm currently looking for IT roles in Japan. Feel free to reach out!</p>
+    <p class="contact-intro">Looking for IT roles in Japan. Feel free to reach out!</p>
     <div class="contact-grid">
       <div class="contact-item">
         <span class="contact-label">Email</span>
@@ -152,57 +160,12 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2027 Samundra Khiuju &nbsp;&middot;&nbsp; Built with HTML / CSS / JS in Japan</p>
   </footer>
 
   <script src="script.js"></script>
-<canvas id="particles"></canvas>
 
-<script>
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-canvas.style.position = 'fixed';
-canvas.style.top = '0';
-canvas.style.left = '0';
-canvas.style.zIndex = '-1';
-canvas.style.pointerEvents = 'none';
-
-let particles = [];
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener('resize', resize);
-
-for (let i = 0; i < 60; i++) {
-  particles.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 2 + 0.5,
-    dx: (Math.random() - 0.5) * 0.4,
-    dy: (Math.random() - 0.5) * 0.4,
-    alpha: Math.random() * 0.5 + 0.1
-  });
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(0, 200, 240, ${p.alpha})`;
-    ctx.fill();
-    p.x += p.dx;
-    p.y += p.dy;
-    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-  });
-  requestAnimationFrame(draw);
-}
-draw();
-</script>
 </body>
 </html>
