@@ -14,7 +14,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   background: var(--bg);
   background-image:
     linear-gradient(rgba(107, 127, 163, 0.03) 1px, transparent 1px),
