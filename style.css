@@ -1,17 +1,16 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #090d13;
-  --bg2: #0f1923;
-  --bg3: #162333;
-  --accent: #00b4d8;
-  --accent2: #48cae4;
-  --accent-light: #90e0ef;
-  --text: #f0f4f8;
-  --muted: #7a9bb5;
-  --border: rgba(0, 180, 216, 0.15);
-  --border-accent: rgba(0, 180, 216, 0.45);
+   --bg: #060a10;
+  --bg2: #0d1825;
+  --bg3: #122030;
+  --accent: #00c8f0;
+  --accent2: #38d9f5;
+  --accent-light: #80eeff;
+  --text: #f0f6ff;
+  --muted: #6a95b0;
+  --border: rgba(0, 200, 240, 0.2);
+  --border-accent: rgba(0, 200, 240, 0.6);
 }
-
 html { scroll-behavior: smooth; }
 
 body {
