@@ -266,3 +266,11 @@ footer {
   .projects-grid { grid-template-columns: 1fr; }
   .contact-grid { flex-direction: column; }
 }
+.avatar-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-accent);
+  flex-shrink: 0;
+}
