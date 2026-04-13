@@ -1,273 +1,154 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samundra Khiuju — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-:root {
-  --bg: #0d0d14;
-  --bg2: #111120;
-  --bg3: #1a1a26;
-  --accent: #7C6FFF;
-  --accent2: #4ecdc4;
-  --text: #f0eff8;
-  --muted: #888899;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(124, 111, 255, 0.3);
-}
+<body>
 
-html { scroll-behavior: smooth; }
+  <nav>
+    <span class="nav-logo">samundra.dev</span>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 16px;
-}
+  <section id="home" class="hero">
+    <div class="avatar">SK</div>
+    <div class="hero-text">
+      <p class="hero-tag">Web Developer · Japan</p>
+      <h1>Hi, I'm <span class="accent">Samundra</span>.</h1>
+      <p class="hero-sub">
+        Building websites from scratch — HTML, CSS &amp; JavaScript.<br>
+        Studying IT in Japan · Targeting IT roles from 2026.
+      </p>
+      <div class="available">
+        <span class="dot"></span>
+        Open to opportunities · 2027 graduate
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View my work</a>
+        <a href="mailto:samundrakhiuju44@gmail.com" class="btn btn-outline">Contact me</a>
+      </div>
+    </div>
+  </section>
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+  <section id="about">
+    <p class="section-tag">About</p>
+    <h2>About me</h2>
+    <p class="about-text">
+      I'm <strong>Samundra Khiuju</strong>, from <strong>Bhaktapur, Nepal</strong>, currently in my 2nd year
+      at a vocational IT school (専門学校) in Japan. I build websites from scratch and level up
+      my JavaScript and Python skills every day. I hold <strong>JLPT N3</strong> and I'm actively
+      studying toward N2. I'm hardworking, self-motivated, and looking to join a Japanese
+      IT or SES company after graduation in 2027.
+    </p>
+    <div class="jp-card">
+      <p class="jp-name">キジュ・サムンドラ</p>
+      <p class="jp-sub">Samundra Khiuju · Web Developer · ネパール出身</p>
+      <p class="jp-body">
+        はじめまして。キジュ・サムンドラと申します。ネパールのバクタプル出身で、現在は日本の専門学校でIT（Webデザイン・開発）を学んでいます。<br><br>
+        HTMLとCSSを使ったWebサイト制作が得意で、現在はJavaScriptとPythonも勉強中です。カフェのWebサイトやポートフォリオサイトを一から制作した経験があります。<br><br>
+        日本語能力試験はN3を取得しており、現在N2の取得を目指して勉強しております。来年卒業予定で、IT企業・SES企業への就職を希望しています。よろしくお願いいたします。
+      </p>
+      <span class="jp-status">
+        <span class="dot"></span>
+        就職活動中 · 2026年 卒業予定
+      </span>
+    </div>
+  </section>
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(13, 13, 20, 0.9);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-}
+  <section id="skills">
+    <p class="section-tag">Skills</p>
+    <h2>What I know</h2>
+    <div class="skills-list">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill learning">JavaScript — learning</span>
+      <span class="skill learning">Python — learning</span>
+      <span class="skill">Git / GitHub</span>
+      <span class="skill">Responsive Design</span>
+      <span class="skill">Japanese · JLPT N3</span>
+      <span class="skill">Excel / PowerPoint</span>
+    </div>
+  </section>
 
-.nav-logo { font-size: 14px; font-weight: 700; color: var(--accent); }
+  <section id="projects">
+    <p class="section-tag">Projects</p>
+    <h2>Things I've built</h2>
+    <div class="projects-grid">
 
-.nav-links { display: flex; gap: 1.8rem; }
-.nav-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
-.nav-links a:hover { color: var(--text); text-decoration: none; }
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <div class="card-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <p>My personal portfolio — dark themed, built entirely from scratch with no frameworks or templates.</p>
+        <div class="card-links">
+          <a href="https://samundrakhiuju.github.io/Samundra-portfolio/" target="_blank" class="card-link">Live ↗</a>
+          <a href="https://github.com/samundrakhiuju" target="_blank" class="card-link">GitHub ↗</a>
+        </div>
+      </div>
 
-section {
-  padding: 4rem 2rem;
-  max-width: 820px;
-  margin: 0 auto;
-  border-top: 1px solid var(--border);
-}
+      <div class="card">
+        <h3>Café Website</h3>
+        <div class="card-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Responsive</span>
+        </div>
+        <p>A multi-page café site built from scratch. Mobile-first layout with homepage, menu, and contact.</p>
+        <div class="card-links">
+          <a href="https://github.com/samundrakhiuju" target="_blank" class="card-link">GitHub ↗</a>
+        </div>
+      </div>
 
-.section-tag {
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-}
+      <div class="card dashed">
+        <h3>Next project — coming soon</h3>
+        <div class="card-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">API</span>
+        </div>
+        <p>Currently building something with JavaScript and a public API. Stay tuned.</p>
+      </div>
 
-h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.4rem; }
+    </div>
+  </section>
 
-/* HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 5rem 2rem 4rem;
-  border-top: none;
-}
+  <section id="contact">
+    <p class="section-tag">Contact</p>
+    <h2>Get in touch</h2>
+    <p class="contact-intro">I'm currently looking for IT roles in Japan. Feel free to reach out!</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:samundrakhiuju44@gmail.com">samundrakhiuju44@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/samundrakhiuju" target="_blank">github.com/samundrakhiuju</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Location</span>
+        <span>Aichi, Japan</span>
+      </div>
+    </div>
+  </section>
 
-.avatar {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-  flex-shrink: 0;
-  border: 3px solid rgba(124, 111, 255, 0.3);
-}
+  <footer>
+    <p>&copy; 2026 Samundra Khiuju &nbsp;&middot;&nbsp; Built with HTML / CSS / JS in Japan</p>
+  </footer>
 
-.hero-tag { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+  <script src="script.js"></script>
 
-.hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.7rem; }
-
-.accent { color: var(--accent); }
-
-.hero-sub { font-size: 15px; color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
-
-.available {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(78, 205, 196, 0.08);
-  border: 1px solid rgba(78, 205, 196, 0.3);
-  border-radius: 100px;
-  padding: 4px 14px;
-  font-size: 12px;
-  color: var(--accent2);
-  margin-bottom: 1.4rem;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent2);
-  animation: pulse 1.8s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 9px 20px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: inherit;
-  text-decoration: none;
-}
-
-.btn-primary { background: var(--accent); color: #fff; border: none; }
-.btn-primary:hover { background: #9589ff; text-decoration: none; }
-.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border-accent); }
-.btn-outline:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-
-/* ABOUT */
-.about-text { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 2rem; }
-.about-text strong { color: var(--text); }
-
-.jp-card {
-  background: var(--bg3);
-  border: 1px solid var(--border-accent);
-  border-radius: 14px;
-  padding: 1.8rem;
-}
-
-.jp-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; }
-.jp-sub { font-size: 12px; color: var(--muted); margin-bottom: 1.2rem; }
-.jp-body { font-size: 15px; line-height: 2; margin-bottom: 1.2rem; }
-
-.jp-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(78, 205, 196, 0.08);
-  border: 1px solid rgba(78, 205, 196, 0.3);
-  border-radius: 100px;
-  padding: 4px 14px;
-  font-size: 12px;
-  color: var(--accent2);
-}
-
-/* SKILLS */
-.skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.skill {
-  font-size: 13px;
-  padding: 5px 15px;
-  border-radius: 100px;
-  border: 1px solid var(--border-accent);
-  color: #c0baff;
-}
-
-.skill.learning { border-color: rgba(250, 199, 117, 0.35); color: #fac775; }
-
-/* PROJECTS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-}
-
-.card {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.3rem;
-  transition: border-color 0.2s, transform 0.2s;
-}
-
-.card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
-.card.dashed { border-style: dashed; opacity: 0.5; }
-.card h3 { font-size: 15px; font-weight: 700; margin-bottom: 0.5rem; }
-.card p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 0.9rem; }
-
-.card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.8rem; }
-
-.tag {
-  font-size: 11px;
-  background: rgba(124, 111, 255, 0.08);
-  color: #9d96ff;
-  border-radius: 4px;
-  padding: 2px 8px;
-}
-
-.card-links { display: flex; gap: 7px; }
-
-.card-link {
-  font-size: 11px;
-  color: var(--accent);
-  border: 1px solid var(--border-accent);
-  border-radius: 6px;
-  padding: 3px 10px;
-  transition: background 0.15s;
-}
-
-.card-link:hover { background: rgba(124, 111, 255, 0.1); text-decoration: none; }
-
-/* CONTACT */
-.contact-intro { color: var(--muted); font-size: 15px; margin-bottom: 1.2rem; }
-.contact-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-
-.contact-item {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.9rem 1.3rem;
-  min-width: 200px;
-  transition: border-color 0.2s;
-}
-
-.contact-item:hover { border-color: var(--border-accent); }
-
-.contact-label {
-  display: block;
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-.contact-item a,
-.contact-item span { font-size: 14px; font-weight: 600; color: var(--text); }
-.contact-item a:hover { color: var(--accent); text-decoration: none; }
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 1.8rem;
-  font-size: 12px;
-  color: #444;
-  border-top: 1px solid var(--border);
-  margin-top: 2rem;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  nav { flex-direction: column; gap: 0.8rem; padding: 1rem; }
-  .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-  .hero { flex-direction: column; text-align: center; padding: 3rem 1.5rem; }
-  .hero-cta { justify-content: center; }
-  .available { margin: 0 auto 1.4rem; }
-  section { padding: 2.5rem 1.5rem; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .contact-grid { flex-direction: column; }
-}
+</body>
+</html>
