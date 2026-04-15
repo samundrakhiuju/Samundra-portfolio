@@ -1,17 +1,14 @@
-const sections = document.querySelectorAll('section, .hero');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 80) {
-      current = section.getAttribute('id');
+// Improved scroll offset calculation and accessibility support
+function scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        const rect = element.getBoundingClientRect();
+        const offset = rect.top + window.scrollY;
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        });
+        element.setAttribute('tabindex', '-1'); // Make the element focusable
+        element.focus(); // Focus on the element after scrolling
     }
-  });
-  navLinks.forEach(link => {
-    link.style.color = '';
-    if (link.getAttribute('href') === '#' + current) {
-      link.style.color = '#eef0f4';
-    }
-  });
-});
+}
