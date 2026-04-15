@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
   navLinks.forEach(link => {
     link.style.color = '';
     if (link.getAttribute('href') === '#' + current) {
-      link.style.color = '#f0eff8';
+      link.style.color = '#eef0f4';
     }
   });
 });
