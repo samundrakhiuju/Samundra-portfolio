@@ -16,7 +16,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  /* Optimized font stack for Japanese and English */
+  font-family: 'Space Grotesk', "Hiragino Sans", "Meiryo", system-ui, sans-serif;
   background: var(--bg);
   background-image:
     linear-gradient(rgba(0, 200, 240, 0.03) 1px, transparent 1px),
@@ -50,7 +51,7 @@ nav {
 
 section {
   padding: 4rem 2rem;
-  max-width: 820px;
+  max-width: 900px; /* Slightly wider for bilingual content */
   margin: 0 auto;
   border-top: 1px solid var(--border);
 }
@@ -70,14 +71,14 @@ h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.4rem; }
   align-items: center;
   gap: 2rem;
   padding: 5rem 2rem 4rem;
-  max-width: 820px;
+  max-width: 900px;
   margin: 0 auto;
   border-top: none;
 }
 
 .avatar-img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border-accent);
@@ -135,7 +136,21 @@ h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.4rem; }
 .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-.about-text { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 2rem; }
+/* About Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+}
+
+.about-text { color: var(--muted); font-size: 15px; line-height: 1.9; }
 .about-text strong { color: var(--text); }
 
 .jp-card {
@@ -143,23 +158,12 @@ h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.4rem; }
   border: 1px solid var(--border-accent);
   border-radius: 14px;
   padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .jp-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; }
 .jp-sub { font-size: 12px; color: var(--muted); margin-bottom: 1.2rem; }
-.jp-body { font-size: 15px; line-height: 2; margin-bottom: 1.2rem; }
-
-.jp-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(0, 200, 240, 0.08);
-  border: 1px solid var(--border-accent);
-  border-radius: 100px;
-  padding: 4px 14px;
-  font-size: 12px;
-  color: var(--accent-light);
-}
+.jp-body { font-size: 14px; line-height: 2; margin-bottom: 1.2rem; color: #d1d9e0; }
 
 .skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
@@ -175,55 +179,60 @@ h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.4rem; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.3rem;
+  padding: 1.5rem;
   transition: border-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
-.card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
-.card h3 { font-size: 15px; font-weight: 700; margin-bottom: 0.5rem; }
-.card p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 0.9rem; }
+.card:hover { border-color: var(--border-accent); transform: translateY(-4px); }
+.card h3 { font-size: 16px; font-weight: 700; margin-bottom: 0.5rem; }
+.card p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 1.2rem; }
 
-.card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.8rem; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: auto; padding-bottom: 1rem; }
 
 .tag {
-  font-size: 11px;
+  font-size: 10px;
   background: rgba(0, 200, 240, 0.08);
   color: var(--accent2);
   border-radius: 4px;
   padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.card-links { display: flex; gap: 7px; }
+.card-links { display: flex; gap: 10px; }
 
 .card-link {
   font-size: 11px;
   color: var(--accent);
   border: 1px solid var(--border-accent);
   border-radius: 6px;
-  padding: 3px 10px;
-  transition: background 0.15s;
+  padding: 4px 12px;
+  transition: all 0.2s;
   text-decoration: none;
 }
 
-.card-link:hover { background: rgba(0, 200, 240, 0.1); text-decoration: none; }
+.card-link:hover { background: var(--accent); color: #060a10; text-decoration: none; }
 
-.contact-intro { color: var(--muted); font-size: 15px; margin-bottom: 1.2rem; }
-.contact-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact-intro { color: var(--muted); font-size: 15px; margin-bottom: 1.5rem; }
+.contact-grid { display: flex; flex-wrap: wrap; gap: 15px; }
 
 .contact-item {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 0.9rem 1.3rem;
-  min-width: 200px;
+  padding: 1rem 1.5rem;
+  flex: 1;
+  min-width: 250px;
   transition: border-color 0.2s;
 }
 
@@ -231,33 +240,31 @@ h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.4rem; }
 
 .contact-label {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--muted);
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.1em;
 }
 
 .contact-item a,
 .contact-item span { font-size: 14px; font-weight: 600; color: var(--text); }
-.contact-item a:hover { color: var(--accent); text-decoration: none; }
 
 footer {
   text-align: center;
-  padding: 1.8rem;
+  padding: 3rem 1.8rem;
   font-size: 12px;
-  color: #444;
+  color: var(--muted);
   border-top: 1px solid var(--border);
-  margin-top: 2rem;
 }
 
 @media (max-width: 600px) {
-  nav { flex-direction: column; gap: 0.8rem; padding: 1rem; }
+  nav { flex-direction: column; gap: 0.8rem; padding: 1.5rem 1rem; }
   .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-  .hero { flex-direction: column; text-align: center; padding: 3rem 1.5rem; }
+  .hero { flex-direction: column; text-align: center; padding: 4rem 1.5rem; }
   .hero-cta { justify-content: center; }
   .available { margin: 0 auto 1.4rem; }
-  section { padding: 2.5rem 1.5rem; }
+  section { padding: 3rem 1.5rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .contact-grid { flex-direction: column; }
 }
